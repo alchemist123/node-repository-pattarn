@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe';
-import { UserRepository } from './user.repository';
+import { UserRepository } from '../repositories/user.repository';
 import { User } from '../models/User';
 import { CreateUserDto, UpdateUserDto } from './types/user.type';
 

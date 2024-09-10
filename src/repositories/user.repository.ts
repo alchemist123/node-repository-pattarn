@@ -1,7 +1,7 @@
 import { injectable } from 'tsyringe';
 import { User } from '../models/User';
-import { IUserRepository } from './interface/user.repository.interface';
-import { CreateUserDto, UpdateUserDto } from './types/user.type';
+import { IUserRepository } from '../user/interface/user.repository.interface';
+import { CreateUserDto, UpdateUserDto } from '../user/types/user.type';
 
 @injectable()
 export class UserRepository implements IUserRepository {
