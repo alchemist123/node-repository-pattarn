@@ -6,21 +6,21 @@ import { CreateUserDto, UpdateUserDto } from '../user/types/user.type';
 @injectable()
 export class UserRepository implements IUserRepository {
   async findAll(): Promise<User[]> {
-    return User.findAll();  // Returning Sequelize model instances
+    return User.findAll();
   }
 
   async findById(id: number): Promise<User | null> {
-    return User.findByPk(id);  // Return the Sequelize model instance or null
+    return User.findByPk(id);  
   }
 
   async create(userData: CreateUserDto): Promise<User> {
-    return User.create(userData);  // Return the created Sequelize model instance
+    return User.create(userData);  
   }
 
   async update(id: number, userData: UpdateUserDto): Promise<User | null> {
     const user = await User.findByPk(id);
     if (user) {
-      return user.update(userData);  // Return the updated Sequelize model instance
+      return user.update(userData);  
     }
     return null;
   }
