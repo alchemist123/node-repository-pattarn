@@ -1,4 +1,3 @@
-// src/modules/index.ts
 import { Sequelize } from 'sequelize';
 import { User } from './User';
 // Import other models
